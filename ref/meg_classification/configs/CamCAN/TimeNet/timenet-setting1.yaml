@@ -1,0 +1,28 @@
+EXPERIMENT:
+  NAME: "timenet"
+  TAG: "setting1"
+  PROJECT: "base project"
+  DEBUG: True
+  SEED: 1234
+  REPETITION_NUM: 5 # Number of repetition times
+DATASET:
+  TYPE: "CamCAN"
+  CHANNELS: 204
+  POINTS: 100
+  NUM_CLASSES: 2
+  TEST:
+    BATCH_SIZE: 128
+MODEL:
+  TYPE: "TimeNet"
+  ARGS:
+    CHANNEL_1: 32
+    CHANNEL_2: 64
+    KERNEL_SIZE_1: 7
+    KERNEL_SIZE_2: 7
+    MAX_POOL: 2
+    DROP_OUT: 0.2
+    BATCH_NORM_FLAG: True
+SOLVER:
+  BATCH_SIZE: 128
+  EPOCHS: 100
+  LR: 0.0003
